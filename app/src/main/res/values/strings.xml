@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ConversorTemperatura</string>
+    <string name="Resultado">TextView</string>
+</resources>
