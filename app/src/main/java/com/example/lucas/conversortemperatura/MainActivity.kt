@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
+import android.widget.ListView
 import android.widget.RadioButton
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
@@ -19,9 +20,10 @@ class MainActivity : AppCompatActivity()
 
     fun onClickButtonTemperatura (view: View)
     {
-        val rbCelsius= findViewById(R.id.radioButtonCelsius) as RadioButton
-        val rbFahr= findViewById(R.id.radioButtonFahrenheit) as RadioButton
-        val txTemperatura= findViewById(R.id.editTextTemperatura) as EditText
+        //val rbCelsius= findViewById(R.id.radioButtonCelsius) as RadioButton
+        val rbCelsius= findViewById<ListView>(R.id.radioButtonCelsius) as RadioButton
+        val rbFahr= findViewById<ListView>(R.id.radioButtonFahrenheit) as RadioButton
+        val txTemperatura= findViewById<ListView>(R.id.editTextTemperatura) as EditText
         var msg: String= ""
 
         if (rbCelsius.isChecked)
