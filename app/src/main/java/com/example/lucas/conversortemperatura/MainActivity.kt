@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity()
         if (rbFahr.isChecked)
         {
             //val nCelsius= (Float.parseFloat(txTemperatura.text.toString()) - 32) * 5/9
-            val nCelsius= (txTemperatura.text.toString().toFloat()) * 5/9
+            val nCelsius= (txTemperatura.text.toString().toFloat() - 32) * 5/9
             msg= "Temperatura em Fahrenheit ${txTemperatura.text} = Temperatura em Celsius $nCelsius"
         }
         Toast.makeText(applicationContext, msg, Toast.LENGTH_LONG).show()
