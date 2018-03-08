@@ -20,20 +20,21 @@ class MainActivity : AppCompatActivity()
 
     fun onClickButtonTemperatura (view: View)
     {
-        //val rbCelsius= findViewById(R.id.radioButtonCelsius) as RadioButton
-        val rbCelsius= findViewById<ListView>(R.id.radioButtonCelsius) as RadioButton
-        val rbFahr= findViewById<ListView>(R.id.radioButtonFahrenheit) as RadioButton
-        val txTemperatura= findViewById<ListView>(R.id.editTextTemperatura) as EditText
+        val rbCelsius= findViewById<View>(R.id.radioButtonCelsius) as RadioButton
+        val rbFahr= findViewById<View>(R.id.radioButtonFahrenheit) as RadioButton
+        val txTemperatura= findViewById<View>(R.id.editTextTemperatura) as EditText
         var msg: String= ""
 
         if (rbCelsius.isChecked)
         {
-            val nFahr= Float.parseFloat(txTemperatura.text.toString()) * 1.8 + 32
+            //val nFahr= Float.parseFloat(txTemperatura.text.toString()) * 1.8 + 32
+            val nFahr= txTemperatura.text.toString().toFloat() * 1.8 + 32
             msg= "Temperatura em Celsius ${txTemperatura.text} = Temperatura em Fahrenheit $nFahr"
         }
         if (rbFahr.isChecked)
         {
-            val nCelsius= (Float.parseFloat(txTemperatura.text.toString()) - 32) * 5/9
+            //val nCelsius= (Float.parseFloat(txTemperatura.text.toString()) - 32) * 5/9
+            val nCelsius= (txTemperatura.text.toString().toFloat()) * 5/9
             msg= "Temperatura em Fahrenheit ${txTemperatura.text} = Temperatura em Celsius $nCelsius"
         }
         Toast.makeText(applicationContext, msg, Toast.LENGTH_LONG).show()
