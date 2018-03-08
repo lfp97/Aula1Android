@@ -26,6 +26,7 @@
         android:layout_height="46dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="52dp"
+        android:onClick="onClickButtonRadioBttnCelsius"
         android:text="Celsius"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/editTextTemperatura" />
@@ -36,6 +37,7 @@
         android:layout_height="46dp"
         android:layout_marginEnd="8dp"
         android:layout_marginTop="52dp"
+        android:onClick="onClickButtonRadioBttnFah"
         android:text="Fahrenheit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/editTextTemperatura" />
@@ -62,7 +64,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="136dp"
-        android:onClick="onClickButtonTemperatura"
+        android:onClick="onClickButtonConverter"
         android:text="Converter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

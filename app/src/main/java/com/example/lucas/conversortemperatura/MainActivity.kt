@@ -18,7 +18,17 @@ class MainActivity : AppCompatActivity()
         setContentView(R.layout.activity_main)
     }
 
-    fun onClickButtonTemperatura (view: View)
+    fun onClickButtonRadioBttnCelsius (view: View)
+    {
+        radioButtonFahrenheit.setChecked(false)
+    }
+
+    fun onClickButtonRadioBttnFah (view: View)
+    {
+        radioButtonCelsius.setChecked(false)
+    }
+
+    fun onClickButtonConverter (view: View)
     {
         val rbCelsius= findViewById<View>(R.id.radioButtonCelsius) as RadioButton
         val rbFahr= findViewById<View>(R.id.radioButtonFahrenheit) as RadioButton
