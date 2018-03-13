@@ -4,7 +4,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
-import android.widget.ListView
+import android.widget.TextView
 import android.widget.RadioButton
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
@@ -20,7 +20,9 @@ class MainActivity : AppCompatActivity()
 
     fun onClickButtonRadioBttnCelsius (view: View)
     {
-        radioButtonFahrenheit.setChecked(false)
+        //ambos funcionam
+        //radioButtonFahrenheit.setChecked(false)
+        radioButtonFahrenheit.isChecked = false
     }
 
     fun onClickButtonRadioBttnFah (view: View)
@@ -47,6 +49,9 @@ class MainActivity : AppCompatActivity()
             val nCelsius= (txTemperatura.text.toString().toFloat() - 32) * 5/9
             msg= "Temperatura em Fahrenheit ${txTemperatura.text} = Temperatura em Celsius $nCelsius"
         }
-        Toast.makeText(applicationContext, msg, Toast.LENGTH_LONG).show()
+        //Toast.makeText(applicationContext, msg, Toast.LENGTH_LONG).show()
+        Toast.makeText(applicationContext, "Pronto!", Toast.LENGTH_SHORT).show()
+        var textViewResultado= findViewById<View>(R.id.TextViewResultado) as TextView
+        textViewResultado.setText(msg)
     }
 }
